@@ -1,0 +1,165 @@
+,noun_chunk,product,freq,overall_freq,Rank
+0,grinder,B00004S9CY.raw.json,66,1345,1.0
+8933,grinder,B000BRLXUI.raw.json,464,1345,1.0
+2886,grinder,B00005OTXM.raw.json,249,1345,1.0
+886,grinder,B00004SPEU.raw.json,195,1345,1.0
+5325,grinder,B00018RRRK.raw.json,371,1345,1.0
+2887,coffee,B00005OTXM.raw.json,211,1056,2.0
+887,coffee,B00004SPEU.raw.json,168,1056,2.0
+5326,coffee,B00018RRRK.raw.json,310,1056,2.0
+8934,coffee,B000BRLXUI.raw.json,367,1056,2.0
+2888,bean,B00005OTXM.raw.json,150,824,3.0
+5327,bean,B00018RRRK.raw.json,226,824,3.0
+1,bean,B00004S9CY.raw.json,60,824,3.0
+888,bean,B00004SPEU.raw.json,100,824,3.0
+8935,bean,B000BRLXUI.raw.json,288,824,3.0
+894,grind,B00004SPEU.raw.json,46,402,4.0
+2892,grind,B00005OTXM.raw.json,64,402,4.0
+5328,grind,B00018RRRK.raw.json,124,402,4.0
+8936,grind,B000BRLXUI.raw.json,154,402,4.0
+11,grind,B00004S9CY.raw.json,14,402,4.0
+889,lid,B00004SPEU.raw.json,59,349,5.0
+5332,lid,B00018RRRK.raw.json,86,349,5.0
+2889,lid,B00005OTXM.raw.json,69,349,5.0
+8938,lid,B000BRLXUI.raw.json,108,349,5.0
+4,lid,B00004S9CY.raw.json,27,349,5.0
+892,time,B00004SPEU.raw.json,48,343,6.0
+2891,time,B00005OTXM.raw.json,66,343,6.0
+5330,time,B00018RRRK.raw.json,91,343,6.0
+8940,time,B000BRLXUI.raw.json,107,343,6.0
+2,time,B00004S9CY.raw.json,31,343,6.0
+9,ground,B00004S9CY.raw.json,19,325,7.0
+2897,ground,B00005OTXM.raw.json,51,325,7.0
+5329,ground,B00018RRRK.raw.json,92,325,7.0
+8937,ground,B000BRLXUI.raw.json,123,325,7.0
+896,ground,B00004SPEU.raw.json,40,325,7.0
+2893,product,B00005OTXM.raw.json,61,323,8.0
+893,product,B00004SPEU.raw.json,47,323,8.0
+10,product,B00004S9CY.raw.json,18,323,8.0
+8939,product,B000BRLXUI.raw.json,107,323,8.0
+5331,product,B00018RRRK.raw.json,90,323,8.0
+890,blade,B00004SPEU.raw.json,55,294,9.0
+2890,blade,B00005OTXM.raw.json,67,294,9.0
+3,blade,B00004S9CY.raw.json,27,294,9.0
+5336,blade,B00018RRRK.raw.json,70,294,9.0
+8946,blade,B000BRLXUI.raw.json,75,294,9.0
+5,coffee grinder,B00004S9CY.raw.json,25,278,10.0
+2894,coffee grinder,B00005OTXM.raw.json,57,278,10.0
+5333,coffee grinder,B00018RRRK.raw.json,72,278,10.0
+8943,coffee grinder,B000BRLXUI.raw.json,86,278,10.0
+898,coffee grinder,B00004SPEU.raw.json,38,278,10.0
+2898,thing,B00005OTXM.raw.json,50,268,11.0
+5335,thing,B00018RRRK.raw.json,70,268,11.0
+895,thing,B00004SPEU.raw.json,40,268,11.0
+8941,thing,B000BRLXUI.raw.json,88,268,11.0
+6,thing,B00004S9CY.raw.json,20,268,11.0
+899,coffee bean,B00004SPEU.raw.json,37,253,12.0
+8944,coffee bean,B000BRLXUI.raw.json,79,253,12.0
+5338,coffee bean,B00018RRRK.raw.json,63,253,12.0
+2896,coffee bean,B00005OTXM.raw.json,54,253,12.0
+7,coffee bean,B00004S9CY.raw.json,20,253,12.0
+8942,year,B000BRLXUI.raw.json,88,249,13.0
+17,year,B00004S9CY.raw.json,10,249,13.0
+900,year,B00004SPEU.raw.json,32,249,13.0
+5334,year,B00018RRRK.raw.json,71,249,13.0
+2899,year,B00005OTXM.raw.json,48,249,13.0
+2900,machine,B00005OTXM.raw.json,43,238,14.0
+8945,machine,B000BRLXUI.raw.json,77,238,14.0
+897,machine,B00004SPEU.raw.json,39,238,14.0
+21,machine,B00004S9CY.raw.json,9,238,14.0
+5337,machine,B00018RRRK.raw.json,70,238,14.0
+2895,spice,B00005OTXM.raw.json,54,236,15.0
+5341,spice,B00018RRRK.raw.json,55,236,15.0
+891,spice,B00004SPEU.raw.json,50,236,15.0
+14,spice,B00004S9CY.raw.json,11,236,15.0
+8948,spice,B000BRLXUI.raw.json,66,236,15.0
+901,use,B00004SPEU.raw.json,31,198,16.0
+2901,use,B00005OTXM.raw.json,39,198,16.0
+5342,use,B00018RRRK.raw.json,55,198,16.0
+8950,use,B000BRLXUI.raw.json,62,198,16.0
+15,use,B00004S9CY.raw.json,11,198,16.0
+8951,Cuisinart,B000BRLXUI.raw.json,59,187,17.0
+8,Cuisinart,B00004S9CY.raw.json,19,187,17.0
+2909,Cuisinart,B00005OTXM.raw.json,25,187,17.0
+903,Cuisinart,B00004SPEU.raw.json,25,187,17.0
+5339,Cuisinart,B00018RRRK.raw.json,59,187,17.0
+5344,cup,B00018RRRK.raw.json,49,177,18.0
+5340,unit,B00018RRRK.raw.json,58,177,18.0
+2905,cup,B00005OTXM.raw.json,29,177,18.0
+2904,unit,B00005OTXM.raw.json,30,177,18.0
+8949,unit,B000BRLXUI.raw.json,63,177,18.0
+8947,cup,B000BRLXUI.raw.json,67,177,18.0
+29,unit,B00004S9CY.raw.json,7,177,18.0
+910,unit,B00004SPEU.raw.json,19,177,18.0
+16,cup,B00004S9CY.raw.json,10,177,18.0
+907,cup,B00004SPEU.raw.json,22,177,18.0
+8952,ground coffee,B000BRLXUI.raw.json,58,164,19.0
+908,ground coffee,B00004SPEU.raw.json,22,164,19.0
+8953,Amazon,B000BRLXUI.raw.json,57,164,19.0
+904,Amazon,B00004SPEU.raw.json,24,164,19.0
+5343,ground coffee,B00018RRRK.raw.json,52,164,19.0
+2908,ground coffee,B00005OTXM.raw.json,26,164,19.0
+53,Amazon,B00004S9CY.raw.json,4,164,19.0
+2903,Amazon,B00005OTXM.raw.json,31,164,19.0
+5345,Amazon,B00018RRRK.raw.json,48,164,19.0
+38,ground coffee,B00004S9CY.raw.json,6,164,19.0
+2902,Krups,B00005OTXM.raw.json,36,150,20.0
+8967,Krups,B000BRLXUI.raw.json,37,150,20.0
+902,Krups,B00004SPEU.raw.json,31,150,20.0
+20,Krups,B00004S9CY.raw.json,9,150,20.0
+5348,Krups,B00018RRRK.raw.json,37,150,20.0
+13,motor,B00004S9CY.raw.json,12,137,21.0
+905,motor,B00004SPEU.raw.json,24,137,21.0
+2907,motor,B00005OTXM.raw.json,27,137,21.0
+8961,motor,B000BRLXUI.raw.json,41,137,21.0
+5353,motor,B00018RRRK.raw.json,33,137,21.0
+5354,button,B00018RRRK.raw.json,32,135,22.0
+911,button,B00004SPEU.raw.json,18,135,22.0
+8954,button,B000BRLXUI.raw.json,55,135,22.0
+2910,button,B00005OTXM.raw.json,24,135,22.0
+35,button,B00004S9CY.raw.json,6,135,22.0
+25,problem,B00004S9CY.raw.json,8,134,23.0
+909,problem,B00004SPEU.raw.json,20,134,23.0
+5346,problem,B00018RRRK.raw.json,38,134,23.0
+8957,problem,B000BRLXUI.raw.json,46,134,23.0
+2912,problem,B00005OTXM.raw.json,22,134,23.0
+8956,french press,B000BRLXUI.raw.json,47,130,24.0
+915,french press,B00004SPEU.raw.json,17,130,24.0
+23,french press,B00004S9CY.raw.json,8,130,24.0
+2914,french press,B00005OTXM.raw.json,21,130,24.0
+5347,french press,B00018RRRK.raw.json,37,130,24.0
+8960,way,B000BRLXUI.raw.json,42,121,25.0
+912,way,B00004SPEU.raw.json,17,121,25.0
+5351,way,B00018RRRK.raw.json,35,121,25.0
+28,way,B00004S9CY.raw.json,7,121,25.0
+2916,way,B00005OTXM.raw.json,20,121,25.0
+8966,water,B000BRLXUI.raw.json,37,120,26.0
+51,water,B00004S9CY.raw.json,4,120,26.0
+906,water,B00004SPEU.raw.json,23,120,26.0
+5357,water,B00018RRRK.raw.json,29,120,26.0
+2906,water,B00005OTXM.raw.json,27,120,26.0
+37,review,B00004S9CY.raw.json,6,117,27.0
+5349,review,B00018RRRK.raw.json,36,117,27.0
+8959,review,B000BRLXUI.raw.json,43,117,27.0
+918,review,B00004SPEU.raw.json,14,117,27.0
+2921,review,B00005OTXM.raw.json,18,117,27.0
+5352,counter,B00018RRRK.raw.json,35,115,28.0
+916,counter,B00004SPEU.raw.json,15,115,28.0
+36,counter,B00004S9CY.raw.json,6,115,28.0
+8965,counter,B000BRLXUI.raw.json,38,115,28.0
+2911,price,B00005OTXM.raw.json,22,115,28.0
+52,price,B00004S9CY.raw.json,4,115,28.0
+5355,price,B00018RRRK.raw.json,31,115,28.0
+2915,counter,B00005OTXM.raw.json,21,115,28.0
+917,price,B00004SPEU.raw.json,14,115,28.0
+8958,price,B000BRLXUI.raw.json,44,115,28.0
+5370,cord,B00018RRRK.raw.json,23,113,29.0
+8964,cord,B000BRLXUI.raw.json,40,113,29.0
+914,cord,B00004SPEU.raw.json,17,113,29.0
+2913,cord,B00005OTXM.raw.json,21,113,29.0
+12,cord,B00004S9CY.raw.json,12,113,29.0
+8963,burr grinder,B000BRLXUI.raw.json,40,106,30.0
+932,burr grinder,B00004SPEU.raw.json,10,106,30.0
+2925,burr grinder,B00005OTXM.raw.json,15,106,30.0
+31,burr grinder,B00004S9CY.raw.json,6,106,30.0
+5350,burr grinder,B00018RRRK.raw.json,35,106,30.0

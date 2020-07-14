@@ -7,35 +7,42 @@ import csv
 import time, json
 import pandas as pd
 
-nlp = spacy.load('en_core_web_sm')
+nlp = spacy.load('en_core_web_sm', disable = ['ner'])
+
+#inputs
+#path - path to the category
+# threshold_num_review   - process only 1000 reviews overall
+# threshold_num_review_per_product - process only 100 reviews per product
+# threshold_review_words - process only reviews with at least 100 words
+# min_freq - minimum overall freq for noun_chunk
+
 
 # in_slug = sys.argv[1]
 
-def extractNounChunk(path, no_of_products, length_of_review, min_freq):
+def extractNounChunk(path, threshold_num_review, threshold_num_review_per_product, threshold_review_words, min_freq):
     start_time = time.time()
     path_to_json = path
     texts = []
     json_files = [pos_json for pos_json in os.listdir(path_to_json) if pos_json.endswith('.json')]
     final_dict = {}
-    new_count = 0
-    count = 0
+    count_review = 0
     for filename in json_files:        
+        if count_review >= threshold_num_review:
+            break
         with open(os.path.join(path_to_json, filename)) as f:
             data = json.load(f)
-            try:
-                if len(data['reviews']) < length_of_review:
+            count_review_product = 0
+            for r in data['reviews']:
+                if count_review_product >= threshold_num_review_per_product:
                     break
-                else:
-                    count += 1
-                    if count <= no_of_products:
-                        for r in data['reviews']:
-                            text = r.get('reviewText','').strip()
-                            if text != '':
-                                texts.append(text)
-                    else:
-                        break
-            except:
-                pass
+                if count_review >= threshold_num_review:
+                    break
+                text = r.get('reviewText','').strip()
+                if len(text.split()) < threshold_review_words:
+                    continue
+                texts.append(text)
+                count_review_product += 1
+                count_review += 1
         docs = nlp.pipe(texts)
         freq = {}
 
@@ -46,7 +53,7 @@ def extractNounChunk(path, no_of_products, length_of_review, min_freq):
                 if lemma not in ['-PRON-','']:
                     freq[lemma] = freq.get(lemma,0) + 1
         final_dict[filename] = freq
-        new_count += 1
+        print(final_dict)
 
     out = csv.writer(open(os.path.join(path_to_json, "intermediate.csv"),'w'))
 
@@ -66,12 +73,14 @@ def extractNounChunk(path, no_of_products, length_of_review, min_freq):
     updated_data.sort_values("Rank", inplace = True)
 
     final_data = updated_data.drop(updated_data[updated_data.overall_freq<=min_freq].index)
-    final_data = final_data.dropna(subset = ["overall_freq"], inplace = True)
+    
     final_data.to_csv(os.path.join(path_to_json, "final.csv"))
     os.remove(os.path.join(path_to_json, "intermediate.csv"))
     
     return time.time()-start_time
 
-f = extractNounChunk('/media/rupinder/C49A5A1B9A5A0A76/Users/Rupinder/Desktop/BVR/New/feature_analysis-master/bvrblackbox_workspace/coffee-grinder', 5, 50,100)
+f = extractNounChunk('/media/rupinder/C49A5A1B9A5A0A76/Users/Rupinder/Desktop/BVR/New/feature_analysis-master/bvrblackbox_workspace/coffee-grinder',
+                     500, 100,50, 100)
 
 print(f)
+
