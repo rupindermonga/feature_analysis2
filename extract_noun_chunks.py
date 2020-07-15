@@ -20,12 +20,16 @@ nlp = spacy.load('en_core_web_sm', disable = ['ner'])
 # in_slug = sys.argv[1]
 
 def extractNounChunk(path, threshold_num_review, threshold_num_review_per_product, threshold_review_words, min_freq):
+    
+
     start_time = time.time()
     path_to_json = path
     texts = []
     json_files = [pos_json for pos_json in os.listdir(path_to_json) if pos_json.endswith('.json')]
     final_dict = {}
     count_review = 0
+    sentence_dict = {}
+    sentence_out = csv.writer(open(os.path.join(path_to_json, "sentence.csv"),'w'))
     for filename in json_files:        
         if count_review >= threshold_num_review:
             break
@@ -45,17 +49,33 @@ def extractNounChunk(path, threshold_num_review, threshold_num_review_per_produc
                 count_review += 1
         docs = nlp.pipe(texts)
         freq = {}
-
+    
+        
         for doc in docs:
+            lemma_set = set()    
+
             for chunk in doc.noun_chunks:
                 tokens = [t.lemma_ for t in chunk if not t.is_stop and t.lemma_ not in ['-PRON-']]
                 lemma = ' '.join(tokens).strip()
                 if lemma not in ['-PRON-','']:
                     freq[lemma] = freq.get(lemma,0) + 1
+                    lemma_set.add(lemma)
+            for eachLemma in lemma_set:
+                if eachLemma not in sentence_dict.keys():
+                    sentence_dict[eachLemma] = [doc]
+                    sentence_out.writerow([eachLemma, doc])
+                else:
+                    if len(sentence_dict[eachLemma])< 5:
+                        sentence_dict[eachLemma].append(doc)
+                        sentence_out.writerow([eachLemma,doc])
+
         final_dict[filename] = freq
-        print(final_dict)
+        
 
     out = csv.writer(open(os.path.join(path_to_json, "intermediate.csv"),'w'))
+
+    
+
 
     for k, v in final_dict.items():
         sort = sorted(v, key=lambda k1:v[k1], reverse=True)
@@ -63,6 +83,8 @@ def extractNounChunk(path, threshold_num_review, threshold_num_review_per_produc
             out.writerow([s,k,v[s]])
 
     updated_data = pd.read_csv(os.path.join(path_to_json, "intermediate.csv"))
+    sentences_data = pd.read_csv(os.path.join(path_to_json, "sentence.csv"))
+    sentences_data.columns = ['noun_chunk', 'sentences']
 
     updated_data.columns = ['noun_chunk', 'product', 'freq']
 
@@ -77,6 +99,9 @@ def extractNounChunk(path, threshold_num_review, threshold_num_review_per_produc
     final_data.to_csv(os.path.join(path_to_json, "final.csv"))
     os.remove(os.path.join(path_to_json, "intermediate.csv"))
     
+    df = sentences_data[sentences_data.noun_chunk.isin(final_data.noun_chunk)]
+    df.to_csv(os.path.join(path_to_json, "final_sentence.csv"))
+    os.remove(os.path.join(path_to_json, "sentence.csv"))
     return time.time()-start_time
 
 f = extractNounChunk('/media/rupinder/C49A5A1B9A5A0A76/Users/Rupinder/Desktop/BVR/New/feature_analysis-master/bvrblackbox_workspace/coffee-grinder',
